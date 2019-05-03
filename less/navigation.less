@@ -2,21 +2,28 @@
 
 .nav-container {
     display        : flex;
-    max-width      : 1000px;
     width          : 100%;
-    margin         : 0 auto;
+    margin         : auto;
     border-bottom  : 3px dashed #C0C0C0;
-    justify-content: space-between;
-    padding        : 25px 110px;
+    justify-content: space-evenly;
+    padding        : 25px 0px;
+
+    @media @mobile{
+        flex-flow: column;
+        padding: 10px 35px;
+        align-items: center;
+    }
 
     nav {
         padding-top: 10px;
+
+        a {
+            text-decoration: none;
+            font-size      : 1.6rem;
+            color          : black;
+            margin         : 20px;
+        }
     }
 
-    a {
-        text-decoration: none;
-        font-size      : 1.6rem;
-        margin-left    : 30px;
-        color          : black;
-    }
+    
 }
